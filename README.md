@@ -34,12 +34,12 @@ A simple book library app created with javascript
 - Linkedin: [evanson-igiri](LinkedIn.com/in/evanson-igiri)
 - Email: [evanson](mailto:igiri.evanson@gmail.com)
 
-👤 **Evanson Igiri**
-
-- Github: [@evansinho](https://github.com/evansinho)
-- Twitter: [@iamsinho1304](https://twitter.com/iamsinho1304)
-- Linkedin: [evanson-igiri](LinkedIn.com/in/evanson-igiri)
-- Email: [evanson](mailto:igiri.evanson@gmail.com)
+👤 **Karthick Venkatesan**
+ 
+- [Portfolio](https://karthi07.github.io/)
+- [LinkedIn](https://www.linkedin.com/in/karthickvenkadesan/)
+- [GitHub](https://github.com/karthi07)
+- [E-mail](itkarthi02@gmail.com)
 
 ## 🤝 Contributing
 
