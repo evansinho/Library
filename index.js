@@ -55,7 +55,6 @@ function clearInput() {
   document.querySelector('#bookRead').checked = false;
 }
 
-
 document.querySelector('#books-ctn').addEventListener('click', (e) => {
   e.preventDefault();
   if (e.target.classList.contains('delete')) {
@@ -87,16 +86,19 @@ form.addEventListener('submit', (e) => {
   render();
 });
 
-
 function populateStorage() {
   const bookOne = ['Budapeste', 'Chico Buarque de Holanda', 174, true];
-  const bookTwo = ['Will my cat eat my eyeballs?', 'Caitlin Doughty', 222, true];
+  const bookTwo = [
+    'Will my cat eat my eyeballs?',
+    'Caitlin Doughty',
+    222,
+    true,
+  ];
   const bookThree = ['The Time Machine', 'H.G. Wells', 118, true];
   localStorage.setItem('book1', JSON.stringify(bookOne));
   localStorage.setItem('book2', JSON.stringify(bookTwo));
   localStorage.setItem('book3', JSON.stringify(bookThree));
 }
-
 
 function fetchLibrary() {
   // If it is the first time entering the site, creates a storage with predetermined books
@@ -109,7 +111,6 @@ function fetchLibrary() {
     render();
   }
 }
-
 
 function saveLibrary() {
   localStorage.clear();
