@@ -1,21 +1,26 @@
 let myLibrary = [];
+const form = document.querySelector(".form");
 
 class Book {
-  constructor(author, tittle, pages, read) {
+  constructor(author, title, pages, read) {
     this.author = author;
-    this.tittle = tittle;
+    this.title = title;
     this.pages = pages;
     this.read = read;
   }
 }
 
-function addBookToLibrary(book) {
-  myLibrary.push(book);
-}
+function addBookToLibrary() {
+  const author = document.querySelector('.author').value
+  const title = document.querySelector('.title').value
+  const pages = document.querySelector('.pages').value
+  const read = document.querySelector('.read')
+  const book = new Book(author, title, pages, read);
 
-function getBooks() {
-  for (book of myLibrary) {
-    console.log(book.tittle);
+  if (title === "" || author === "" || pages === "") {
+    console.log('error')
+  } else {
+    myLibrary.push(book);
   }
 }
 
@@ -26,8 +31,8 @@ function render() {
     <div class="col-sm-4 m-1">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title"> ${book.tittle} </h5>
-          <p class="card-text"> ${book.tittle} is written by ${book.authur} and it has ${book.pages} pages </p>
+          <h5 class="card-title"> ${book.title} </h5>
+          <p class="card-text"> ${book.title} is written by ${book.author} and it has ${book.pages} pages </p>
           <a href="#" class="btn btn-primary">read book</a>
         </div>
       </div>
@@ -36,12 +41,17 @@ function render() {
   }
 }
 
-book1 = new Book("authur1", "test book 1", 300, true);
-addBookToLibrary(book1);
+// book1 = new Book("authur1", "test book 1", 300, true);
+// addBookToLibrary(book1);
 
-book2 = new Book("authur2", "test book 2", 400, false);
-addBookToLibrary(book2);
+// book2 = new Book("authur2", "test book 2", 400, false);
+// addBookToLibrary(book2);
 
-getBooks();
 
-render();
+
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  addBookToLibrary()
+  render();
+});
