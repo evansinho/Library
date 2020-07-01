@@ -11,12 +11,7 @@ body {
   text-align: center;
 }
 
-form input {
+.form {
   width: 50%;
-}
-
-header h1 {
-}
-
-main h4 {
+  margin-left: 25%;
 }
