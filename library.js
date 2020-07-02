@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const myLibrary = [];
 
 class Book {
@@ -10,9 +11,9 @@ class Book {
 }
 
 function addBookToLibrary(book) {
-  if (book.title === "" || book.author === "" || book.pages === "") {
+  if (book.title === '' || book.author === '' || book.pages === '') {
     // eslint-disable-next-line no-throw-literal
-    throw "error";
+    throw 'error';
   } else {
     myLibrary.push(book);
   }

@@ -1,23 +1,24 @@
-window.addEventListener("load", fetchLibrary);
-window.addEventListener("unload", saveLibrary);
+/* eslint-disable no-plusplus */
+/* global myLibrary:true, addBookToLibrary, Book, render */
+
 
 function populateStorage() {
-  const bookOne = ["Budapeste", "Chico Buarque de Holanda", 174, true];
+  const bookOne = ['Budapeste', 'Chico Buarque de Holanda', 174, true];
   const bookTwo = [
-    "Will my cat eat my eyeballs?",
-    "Caitlin Doughty",
+    'Will my cat eat my eyeballs?',
+    'Caitlin Doughty',
     222,
     true,
   ];
-  const bookThree = ["The Time Machine", "H.G. Wells", 118, true];
-  localStorage.setItem("book1", JSON.stringify(bookOne));
-  localStorage.setItem("book2", JSON.stringify(bookTwo));
-  localStorage.setItem("book3", JSON.stringify(bookThree));
+  const bookThree = ['The Time Machine', 'H.G. Wells', 118, true];
+  localStorage.setItem('book1', JSON.stringify(bookOne));
+  localStorage.setItem('book2', JSON.stringify(bookTwo));
+  localStorage.setItem('book3', JSON.stringify(bookThree));
 }
 
 function fetchLibrary() {
   // If it is the first time entering the site, creates a storage with predetermined books
-  if (!localStorage.getItem("book1")) populateStorage();
+  if (!localStorage.getItem('book1')) populateStorage();
 
   for (let i = 1; i <= localStorage.length; i++) {
     const bookArr = JSON.parse(localStorage.getItem(`book${i}`));
@@ -36,3 +37,6 @@ function saveLibrary() {
     i++;
   });
 }
+
+window.addEventListener('load', fetchLibrary);
+window.addEventListener('unload', saveLibrary);
