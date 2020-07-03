@@ -40,7 +40,7 @@ document.querySelector('#books-ctn').addEventListener('click', (e) => {
     render();
   }
   if (e.target.classList.contains('read')) {
-    const { id } = e.target.parentElement.dataset.id;
+    const { id } = e.target.parentElement.dataset;
     myLibrary[id].read = !myLibrary[id].read;
     render();
   }

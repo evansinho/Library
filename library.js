@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /* eslint-disable no-unused-vars */
 const myLibrary = [];
 
@@ -13,7 +14,7 @@ class Book {
 function addBookToLibrary(book) {
   if (book.title === '' || book.author === '' || book.pages === '') {
     // eslint-disable-next-line no-throw-literal
-    throw 'error';
+    alert('input field can not be empty');
   } else {
     myLibrary.push(book);
   }
