@@ -19,3 +19,20 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
   }
 }
+
+function deleteBook(e) {
+  const { id } = e.target.parentElement.dataset;
+  myLibrary.splice(id, 1);
+}
+
+function changeReadStatus(e) {
+  const { id } = e.target.parentElement.dataset;
+  myLibrary[id].read = !myLibrary[id].read;
+}
+
+function clearInput() {
+  document.querySelector('#bookAuthor').value = '';
+  document.querySelector('#bookTitle').value = '';
+  document.querySelector('#bookPages').value = '';
+  document.querySelector('#bookRead').checked = false;
+}

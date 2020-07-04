@@ -1,5 +1,5 @@
 /* eslint-disable no-plusplus */
-/* global myLibrary:true, addBookToLibrary, Book */
+/* global myLibrary:true, addBookToLibrary, Book, deleteBook, changeReadStatus, clearInput */
 
 const form = document.querySelector('.form');
 
@@ -25,23 +25,14 @@ function render() {
   }
 }
 
-function clearInput() {
-  document.querySelector('#bookAuthor').value = '';
-  document.querySelector('#bookTitle').value = '';
-  document.querySelector('#bookPages').value = '';
-  document.querySelector('#bookRead').checked = false;
-}
-
 document.querySelector('#books-ctn').addEventListener('click', (e) => {
   e.preventDefault();
   if (e.target.classList.contains('delete')) {
-    const { id } = e.target.parentElement.dataset;
-    myLibrary.splice(id, 1);
+    deleteBook(e);
     render();
   }
   if (e.target.classList.contains('read')) {
-    const { id } = e.target.parentElement.dataset;
-    myLibrary[id].read = !myLibrary[id].read;
+    changeReadStatus(e);
     render();
   }
 });
