@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <title>Simple Library App</title>
+  </head>
+  <body class="container">
+    <header>
+      <h1 class="text-center my-4">
+        SIMPLE BOOK LIBRARY
+      </h1>
+    </header>
+
+    <main>
+      <form class="form">
+        <div class="form-group">
+          <label for="bookAuthor">Author</label>
+          <input
+            type="text"
+            class="form-control author"
+            id="bookAuthor"
+            placeholder="Autor Name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="bookTitle">Title</label>
+          <input
+            type="text"
+            class="form-control title"
+            id="bookTitle"
+            placeholder="Title Name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="bookPages">Pages</label>
+          <input
+            type="number"
+            class="form-control pages"
+            id="bookPages"
+            placeholder="Number of Pages"
+          />
+        </div>
+        <div class="form-group">
+          <label for="bookRead">Read</label>
+          <input
+            type="checkbox"
+            class="form-control read"
+            id="bookRead"
+            placeholder="Number of Pages"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+      </form>
+
+      <h4 class="text-center">Our Books</h4>
+      <div class="all-books">
+        <div class="card-container">
+          <div class="row" id="books-ctn"></div>
+        </div>
+      </div>
+    </main>
+    <script src="library.js"></script>
+    <script src="populate_data.js"></script>
+    <script src="dom.js"></script>
+  </body>
+</html>
