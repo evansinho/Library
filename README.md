@@ -9,6 +9,10 @@ A simple book library app created with javascript
 - JavaScript
 - Bootstrap
 
+## live demo
+
+[live link](https://raw.githack.com/evansinho/Library/library/index.html)
+
 ![Create Book](screenshots/library1.png)
 
 ### Prerequisites
